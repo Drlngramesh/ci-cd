@@ -6,15 +6,17 @@ on:
       - main
 
 jobs:
-  build:
+  build-test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Echo message
-        run: echo "Build Started"
+      - name: Build
+        run: echo "Building application"
 
-      - name: Show files
-        run: ls -la
+      - name: Test
+        run: |
+          echo "Running tests"
+          test -f app.txt
