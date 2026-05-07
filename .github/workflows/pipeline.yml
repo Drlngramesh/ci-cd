@@ -17,6 +17,4 @@ jobs:
         run: echo "Building application"
 
       - name: Test
-        run: |
-          echo "Running tests"
-          test -f app.txt
+        run: test -f ./app.txt
